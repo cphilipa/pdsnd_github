@@ -184,15 +184,26 @@ def user_stats(df):
 def disp_data(df):
     """Displays raw dataframe on user request."""
     raw_start = 0
-    raw_end = 5
+    new_start = 0
+    raw_end = 0
+    raw_len = 5
     while True:
         raw_data = ' '
         if raw_data.lower() != 'yes':
             raw_data = str(input("\n\nWould you like to see (more) Raw Data? Enter Yes or No.\n"))
-            if raw_data.lower() == 'yes':
+            if raw_data.lower() == 'yes':    
+                raw_len_input = int(input("\nHow many rows would you like to see?\n"),0)
+                if raw_len_input > 0:
+                    raw_len = raw_len_input
+                    raw_end += raw_len
+                    new_start += raw_len
+                else:
+                    raw_len = raw_len
+                    raw_end += raw_len
+                    new_start += raw_len
                 print(df.iloc[raw_start : raw_end])
-                raw_start += 5
-                raw_end += 5
+                raw_start = new_start
+                """raw_end = 5"""
             else:
                 break
         elif raw_data.lower() == 'no':
