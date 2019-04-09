@@ -1,7 +1,7 @@
 ### Date created
 Project Created 2019-04-07
 Readme Created 2019-04-07
-Readme Updated 2019-04-07
+Readme Updated 2019-04-09
 
 ### Project Title
 Bikeshare Statistics
@@ -23,6 +23,7 @@ Count by Gender
 Min/Max/Most Common Birth Year
 Processing Times
 Raw Data Output
+Adding stuff for new Documentation Commit
 
 ### Files used
 chicago.csv
