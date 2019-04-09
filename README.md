@@ -27,6 +27,7 @@ Adding stuff for new Documentation Commit
 Bulletize Statistics
 Final Update of README.md
 Oops, wasn't really done yet.
+##Finalized again!
 
 ### Files used
 chicago.csv
