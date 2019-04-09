@@ -32,14 +32,14 @@ def get_filters():
 
     # get user input for month (all, january, february, ... , june)
     while True:
-        month = str(input("Input month for which you wish to see data; All, January, February, ... , June:\n").lower())
+        month = str(input("Input month for which you wish to see data; All, January, February, March, April, May, June:\n").lower())
         if month in months:
             break
         else:
             print("You input an invalid month.")
     # get user input for day of week (all, monday, tuesday, ... sunday)    
     while True:
-        day = str(input("Input day for which you wish to see data; All, Monday, Tuesday, ... , Sunday:\n").lower())
+        day = str(input("Input day for which you wish to see data; All, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday:\n").lower())
         if day in days:
             break
         else:
@@ -184,15 +184,26 @@ def user_stats(df):
 def disp_data(df):
     """Displays raw dataframe on user request."""
     raw_start = 0
-    raw_end = 5
+    new_start = 0
+    raw_end = 0
+    raw_len = 5
     while True:
         raw_data = ' '
         if raw_data.lower() != 'yes':
             raw_data = str(input("\n\nWould you like to see (more) Raw Data? Enter Yes or No.\n"))
-            if raw_data.lower() == 'yes':
+            if raw_data.lower() == 'yes':    
+                raw_len_input = int(input("\nHow many rows would you like to see?\n"),0)
+                if raw_len_input > 0:
+                    raw_len = raw_len_input
+                    raw_end += raw_len
+                    new_start += raw_len
+                else:
+                    raw_len = raw_len
+                    raw_end += raw_len
+                    new_start += raw_len
                 print(df.iloc[raw_start : raw_end])
-                raw_start += 5
-                raw_end += 5
+                raw_start = new_start
+                """raw_end = 5"""
             else:
                 break
         elif raw_data.lower() == 'no':
@@ -213,7 +224,7 @@ def main():
         else:
             print("Filter results in no data.")
 
-        restart = input('\nWould you like to restart? Enter yes or no.\n')
+        restart = input('\nWould you like to restart? Enter Yes or No.\n')
         if restart.lower() != 'yes':
             break
 
