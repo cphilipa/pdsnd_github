@@ -26,6 +26,7 @@ Once the app uploads and filters data based on User input, it displays the follo
 Adding stuff for new Documentation Commit
 Bulletize Statistics
 Final Update of README.md
+Oops, wasn't really done yet.
 
 ### Files used
 chicago.csv
