@@ -25,6 +25,7 @@ Once the app uploads and filters data based on User input, it displays the follo
 -Raw Data Output
 Adding stuff for new Documentation Commit
 Bulletize Statistics
+Final Update of README.md
 
 ### Files used
 chicago.csv
