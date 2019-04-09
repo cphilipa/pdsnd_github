@@ -32,4 +32,5 @@ washington.csv
 ### Credits
 The following references are identified within the code where utilized:
 While True, StackOverflow, SethMMorton: <https://stackoverflow.com/questions/19408087/python-user-input-error-handling>
+default values on empty user input in python, stackoverflow, piokuc and Jayanth Koushik: <https://stackoverflow.com/questions/22402548/default-values-on-empty-user-input-in-python>
 All others were taken from class reference / modified from pandas.pydata.org

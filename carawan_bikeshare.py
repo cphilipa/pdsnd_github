@@ -191,8 +191,12 @@ def disp_data(df):
         raw_data = ' '
         if raw_data.lower() != 'yes':
             raw_data = str(input("\n\nWould you like to see (more) Raw Data? Enter Yes or No.\n"))
-            if raw_data.lower() == 'yes':    
-                raw_len_input = int(input("\nHow many rows would you like to see?\n"),0)
+            if raw_data.lower() == 'yes':   
+                """default values on empty user input in python, stackoverflow, piokuc and Jayanth Koushik""" 
+                try:
+                    raw_len_input = int(input("\nHow many rows would you like to see?\n"),0)
+                except ValueError:
+                    raw_len_input = 0
                 if raw_len_input > 0:
                     raw_len = raw_len_input
                     raw_end += raw_len
