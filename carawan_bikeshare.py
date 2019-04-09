@@ -32,14 +32,14 @@ def get_filters():
 
     # get user input for month (all, january, february, ... , june)
     while True:
-        month = str(input("Input month for which you wish to see data; All, January, February, ... , June:\n").lower())
+        month = str(input("Input month for which you wish to see data; All, January, February, March, April, May, June:\n").lower())
         if month in months:
             break
         else:
             print("You input an invalid month.")
     # get user input for day of week (all, monday, tuesday, ... sunday)    
     while True:
-        day = str(input("Input day for which you wish to see data; All, Monday, Tuesday, ... , Sunday:\n").lower())
+        day = str(input("Input day for which you wish to see data; All, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday:\n").lower())
         if day in days:
             break
         else:
@@ -213,7 +213,7 @@ def main():
         else:
             print("Filter results in no data.")
 
-        restart = input('\nWould you like to restart? Enter yes or no.\n')
+        restart = input('\nWould you like to restart? Enter Yes or No.\n')
         if restart.lower() != 'yes':
             break
 
